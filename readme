@@ -4,3 +4,4 @@ sources :
 - https://www.linkedin.com/pulse/understanding-diamond-proxy-contracts-solidity-design-mahesh-rajput/
 - https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357
 - https://blog.openzeppelin.com/proxy-patterns
+- https://docs.openzeppelin.com/contracts/4.x/api/proxy
