@@ -1,7 +1,15 @@
-sources : 
+## sources : 
 - https://www.youtube.com/watch?v=KGmV8-NdPgE ( 5 parts )
 - https://blog.logrocket.com/developers-guide-solidity-design-patterns/
-- https://www.linkedin.com/pulse/understanding-diamond-proxy-contracts-solidity-design-mahesh-rajput/
-- https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357
 - https://blog.openzeppelin.com/proxy-patterns
 - https://docs.openzeppelin.com/contracts/4.x/api/proxy
+
+### diamond pattern
+
+- https://www.youtube.com/watch?v=OMM9pgEJ4og&t=144s
+- https://www.linkedin.com/pulse/understanding-diamond-proxy-contracts-solidity-design-mahesh-rajput/
+
+## Unsafe model !important
+
+- https://www.youtube.com/watch?v=XmxfB5JOt1Q
+- https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357

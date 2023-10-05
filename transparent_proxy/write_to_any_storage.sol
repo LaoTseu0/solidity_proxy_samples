@@ -2,8 +2,6 @@
 pragma solidity 0.8.18;
 
 contract CounterV1 {
-    address public implementation;
-    address public admin;
     uint public count;
 
     function inc() external {
@@ -12,8 +10,6 @@ contract CounterV1 {
 }
 
 contract CounterV2 {
-    address public implementation;
-    address public admin;
     uint public count;
 
     function inc() external {
@@ -59,5 +55,29 @@ contract Proxy {
     function upgradeTo(address _implementation) external {
         require(msg.sender == admin, "not authorized");
         implementation = _implementation;
+    }
+}
+
+library StorageSlot {
+    struct AddressSlot {
+        address value;
+    }
+
+    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {
+        assembly {
+            r.slot := slot
+        }
+    }
+}
+
+contract TestSlot {
+    bytes32 public constant SLOT = keccak256("TEST_SLOT");
+
+    function getSlot() external view returns (address) {
+        return StorageSlot.getAddressSlot(SLOT).value;
+    }
+
+    function writeSlot(address _addr) external {
+        StorageSlot.getAddressSlot(SLOT).value = _addr;
     }
 }
